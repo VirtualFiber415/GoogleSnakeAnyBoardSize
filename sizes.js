@@ -1,11 +1,11 @@
 snake.size = function(settings = {}) {
   settings.lightSquares = settings.lightSquares || (settings.dark ? '#47404F' : '#AAD751');
   settings.darkSquares  = settings.darkSquares  || (settings.dark ? '#423C49' : '#A2D149');
-  settings.width        = settings.width        || 40;
-  settings.height       = settings.height       || 40;
-  let squareSize = 600 / settings.width;
-  if(squareSize * settings.height > 530)
-    squareSize = 530 / settings.height;
+  settings.width        = settings.width        || 50;
+  settings.height       = settings.height       || 50;
+  let squareSize = 700 / settings.width;
+  if(squareSize * settings.height > 560)
+    squareSize = 560 / settings.height;
 
 
   const scripts = document.getElementsByTagName('script');
@@ -19,8 +19,8 @@ snake.size = function(settings = {}) {
 
       const icon = new Image();
       icon.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/200px-Question_mark_%28black%29.svg.png';
-      icon.width = 47;
-      icon.height = 47;
+      icon.width = 50;
+      icon.height = 50;
       if(document.querySelector('#size').childElementCount > 3)
         for(let i = document.querySelector('#size').childElementCount - 1; i >= 3; i--)
           document.querySelector('#size').removeChild(document.querySelector('#size').children[i]);
